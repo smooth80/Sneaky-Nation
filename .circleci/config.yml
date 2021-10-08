@@ -1,1 +1,7 @@
-
+orb-tools: circleci/orb-tools@10.0.5
+workflows::
+  example-workflow:
+    jobs:
+      - orb-tools/publish-dev:
+        checkout: true
+        orb-name: (string)
